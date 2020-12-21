@@ -1,0 +1,79 @@
+/*Timer.js test*/
+body {
+    margin: 0;
+    font-family: monospace;
+    background: #5da7fa;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.well {
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+time {
+    font-size: 21px;
+    display: block;
+    margin-top: 50px;
+}
+
+button {
+    background: #333;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 3px;
+    padding: 0 20px;
+    border: none;
+    text-transform: uppercase;
+    outline: none !important;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.button-group {
+    margin-top: 25px;
+}
+
+select {
+    border: 1px solid #333;
+    padding: 10px 3px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.disply-time {
+    display: inline-block;
+    font-size: 20px;
+    background: #5da7fa;
+    line-height: 40px;
+    vertical-align: sub;
+    color: #fff;
+    width: 40px;
+    border-radius: 50px;
+}
+
+input {
+    outline: none !important;
+    border: 1px solid;
+    height: 37px;
+    padding: 0 10px;
+}
+
+.form-group {
+    margin-top: 65px;
+}
+
+@media only screen and (max-width: 425px) {
+    .well {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}

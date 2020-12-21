@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+	.color{
+		background-color: green;
+	}
+</style>
+<body id="bg">
+
+    <!-- Timer -->
+    <div class="well">
+      <div class="form-group">
+            <h3>Set The Timer First</h3>
+            <select id="time-type">
+                <option value="second">Second</option>
+                <option value="minute">Minute</option>
+                <option value="hour">Hour</option>
+            </select>
+            <input type="number" id="time-field" placeholder="00">
+            <button type="button" onclick="setTime()">Set</button>
+        </div>
+        <h3>Timer</h3>
+        <time id="demo"></time>
+
+        <div class="button-group">
+            <button type="button" onclick="timer.pause()">Pause</button>
+            <button type="button" onclick="timer.resume()">Resume/Start</button>
+            <button type="button" onclick="timer.stop()">Stop</button>
+        </div>
+
+        
+        
+    </div>
+   
+    <!--  timer.js -->
+    <script src="js/timers.js"></script>
+
+    <!-- //timer.js -->
+    <script>
+        let timer = new Timer({
+            el: 'time',
+            time: {
+                second: 0,
+                minute: 0,
+                hour: 0,
+            },
+        });
+
+        // Time getter
+        function getTime() {
+            var time = timer.get(document.querySelector('#time').value);
+            document.querySelector('.disply-time').innerText = time;
+        }
+
+        // Time setter
+        function setTime() {
+            var time = document.querySelector('#time-type').value;
+            var value = document.querySelector('#time-field').value;
+            timer.set(time, value);
+            
+        }
+        
+    </script>
+   
+</body>
+</html>
